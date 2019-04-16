@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showPupopMessage(String title, String message){
-        AlertDialog.Builder mPupopMessage = new AlertDialog.Builder(this);
-        mPupopMessage.setTitle(title);
-        mPupopMessage.setMessage(message);
-        mPupopMessage.setPositiveButton("OK", null);
-        mPupopMessage.show();
+      new AlertDialog.Builder(this)
+        .setTitle(title)
+        .setMessage(message)
+        .setPositiveButton("OK", null)
+        .show();
     }
 
     private Float getResult(int value){
