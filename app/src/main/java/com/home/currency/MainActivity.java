@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void getExchangeRate(View view){
         if (mEditText.getText().toString().length() <= 1){
-            showPupopMessage("Problem", "Please enter your NTD amount");
+            showPupopMessage(getString(R.string.problem), getString(R.string.please_enter_ntd));
         }else{
-            showPupopMessage("Result", "USD is " + getResult(Integer.valueOf(mEditText.getText().toString())));
+            showPupopMessage(getString(R.string.result), getString(R.string.usd_is) + " " + getResult(Integer.valueOf(mEditText.getText().toString())));
         }
     }
 
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
       new AlertDialog.Builder(this)
         .setTitle(title)
         .setMessage(message)
-        .setPositiveButton("OK", null)
+        .setPositiveButton(getString(R.string.ok), null)
         .show();
     }
 
